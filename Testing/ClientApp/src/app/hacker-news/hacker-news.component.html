@@ -1,0 +1,11 @@
+<h1><img src="../../assets/hacker-news1.jpg" /></h1>
+
+<h3>Top New Stories</h3>
+
+<p *ngIf="!newsArticles"><em>Loading...</em></p>
+
+<ul class='list-group' *ngIf="newsArticles">
+    <li class="list-group-item" *ngFor="let article of newsArticles">
+      <a target="_blank" href="{{ article.url }}">{{ article.title }}</a> by: {{ article.by }}
+    </li>
+</ul>
